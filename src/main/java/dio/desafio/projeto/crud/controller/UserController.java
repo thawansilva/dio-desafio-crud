@@ -26,12 +26,12 @@ public class UserController {
         return userService.saveUser(user);
     }
     
-    @GetMapping("/findAll")
+    @GetMapping("/users")
     public List<User> findAll() {
         return userService.findAll();
     }
 
-    @GetMapping("/findById")
+    @GetMapping("/users/{id}")
     public User findById(@RequestParam int id) {
         return userService.FindById(id);
     }
